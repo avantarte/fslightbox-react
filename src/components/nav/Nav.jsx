@@ -12,17 +12,15 @@ const Nav = ({ fsLightbox }) => {
   return (
     <div className={`${PREFIX}nav`}>
       <Toolbar fsLightbox={fsLightbox} />
+      <Caption
+        fsLightbox={fsLightbox}
+        stageIndex={fsLightbox.stageIndexes.current}
+      />
       {fsLightbox.props.sources.length > 1 && (
-        <>
-          <SlideNumber
-            fsLightbox={fsLightbox}
-            stageIndex={fsLightbox.stageIndexes.current}
-          />
-          <Caption
-            fsLightbox={fsLightbox}
-            stageIndex={fsLightbox.stageIndexes.current}
-          />
-        </>
+        <SlideNumber
+          fsLightbox={fsLightbox}
+          stageIndex={fsLightbox.stageIndexes.current}
+        />
       )}
     </div>
   );
