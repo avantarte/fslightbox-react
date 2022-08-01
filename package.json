@@ -1,17 +1,17 @@
 {
-  "name": "fslightbox-react",
-  "version": "1.6.2-2",
+  "name": "@avant-arte/fslightbox-react-fork",
+  "version": "0.0.1",
   "description": "React version of Fullscreen Lightbox. Modern and easy plugin for displaying images and videos in clean overlaying box. Display single source or create beautiful gallery with powerful lightbox.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "production": "webpack --mode production --config webpack.prod.config.js --display-modules && gulp",
+    "production": "webpack --mode production --config webpack.prod.config.js --display-modules && gulp && npm pack",
     "watch": "webpack-dev-server --mode development --host 0.0.0.0",
     "cypress": "concurrently --kill-others \"webpack-dev-server --config ./webpack.cypress.config.js --mode development\" \"node ./node_modules/.bin/cypress open\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/banthagroup/fslightbox-react"
+    "url": "git+https://github.com/avantarte/fslightbox-react.git"
   },
   "jest": {
     "setupFiles": [
@@ -41,9 +41,9 @@
   "author": "Bantha Apps Piotr Zdziarski",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/banthagroup/fslightbox-react/issues"
+    "url": "https://github.com/avantarte/fslightbox-react/issues"
   },
-  "homepage": "https://fslightbox.com/",
+  "homepage": "https://github.com/avantarte/fslightbox-react#readme",
   "peerDependencies": {
     "prop-types": ">=15.6.2",
     "react": ">=16.8.0",
@@ -86,5 +86,7 @@
     "webpack-cli": "^3.3.1",
     "webpack-dev-server": "^3.3.1"
   },
-  "dependencies": {}
+  "directories": {
+    "test": "tests"
+  }
 }
